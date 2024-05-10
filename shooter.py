@@ -27,7 +27,7 @@ picam2.start()
 
 while(True):
     print("Press [s] to take a picture...")
-    key = keyboard.wait()
+    key = input()
     print(f"You pressed {key}")
     if key == 's':  
         print("Picture taken")
