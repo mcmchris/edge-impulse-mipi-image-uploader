@@ -5,7 +5,7 @@ ei.API_KEY = "ei_056b076d107287ae4471a52c50e98484b07e8134d8ebbdf380adfcd56a40f27
 
 response = ei.experimental.data.upload_directory(
     directory="validate",
-    category="test",
+    category="testing",
     label=None, # Will use the prefix before the '.' on each filename for the label
     metadata={
         "date": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
