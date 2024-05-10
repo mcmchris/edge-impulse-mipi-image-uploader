@@ -1,5 +1,6 @@
 import time
 import os
+import keyboard
 
 from picamera2 import Picamera2, Preview
 
@@ -24,5 +25,12 @@ picam2.configure(preview_config)
 picam2.start()
 #time.sleep(2)
 
-picam2.switch_mode_and_capture_file(
-    "still", 'image'+str(number+1)+'.jpg')
+while(true):
+    print("Press [s] to take a picture...")
+    key = keyboard.getch()
+    if(key == "s"):  
+        print("Picture taken")
+        picam2.switch_mode_and_capture_file("still", 'image'+str(number+1)+'.jpg')
+    else:
+        print("Wrong key pressed")
+        
