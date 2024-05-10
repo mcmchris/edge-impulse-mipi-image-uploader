@@ -15,9 +15,9 @@ number = int(''.join([i for i in newest if i.isdigit()]))
 
 picam2 = Picamera2()
 picam2.start_preview(Preview.DRM, x=0, y=0, width=1920, height=1080)
-
+#picam2.still_configuration.size = (1600, 1200)
 preview_config = picam2.create_preview_configuration()
-capture_config = picam2.create_still_configuration()
+capture_config = picam2.create_still_configuration(size=(224, 224))
 picam2.configure(preview_config)
 
 picam2.start()
