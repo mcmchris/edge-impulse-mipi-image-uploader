@@ -6,7 +6,7 @@ from picamera2 import Picamera2, Preview
 
 os.chdir('/root/edge-impulse-mipi-image-uploader/validate')
 
-images = [i for i in os.listdir(os.getcwd()) if i.lower().startswith('no anomaly')]
+images = [i for i in os.listdir(os.getcwd()) if i.lower().startswith('no')]
 if images:
     newest = max(images, key=os.path.getmtime)
 else:
