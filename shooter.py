@@ -22,7 +22,7 @@ picam2.still_configuration.size = (224, 224)
 picam2.configure(preview_config)
 
 picam2.start()
-time.sleep(2)
+#time.sleep(2)
 
 picam2.switch_mode_and_capture_file(
     "still", 'image'+str(number+1)+'.jpg')
