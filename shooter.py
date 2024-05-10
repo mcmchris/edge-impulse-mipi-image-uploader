@@ -27,7 +27,7 @@ picam2.start()
 
 while(True):
     print("Press [s] to take a picture...")
-    key = keyboard.getch()
+    key = keyboard.wait()
     if(key == "s"):  
         print("Picture taken")
         picam2.switch_mode_and_capture_file("still", 'image'+str(number+1)+'.jpg')
