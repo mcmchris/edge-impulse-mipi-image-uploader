@@ -4,8 +4,8 @@ from datetime import datetime
 ei.API_KEY = "ei_056b076d107287ae4471a52c50e98484b07e8134d8ebbdf380adfcd56a40f27a"
 
 response = ei.experimental.data.upload_directory(
-    directory="dataset",
-    category="training",
+    directory="validate",
+    category="test",
     label=None, # Will use the prefix before the '.' on each filename for the label
     metadata={
         "date": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
