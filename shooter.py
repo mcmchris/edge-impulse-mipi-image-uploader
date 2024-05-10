@@ -6,11 +6,11 @@ from picamera2 import Picamera2, Preview
 
 os.chdir('/root/edge-impulse-mipi-image-uploader/validate')
 
-images = [i for i in os.listdir(os.getcwd()) if i.lower().startswith('no')]
+images = [i for i in os.listdir(os.getcwd()) if i.lower().startswith('imagea')]
 if images:
     newest = max(images, key=os.path.getmtime)
 else:
-    newest = 'no anomaly.jpg'
+    newest = 'imagea0.jpg'
 
 number = int(''.join([i for i in newest if i.isdigit()]))
 
@@ -25,7 +25,7 @@ picam2.configure(preview_config)
 picam2.start()
 time.sleep(2)
 
-picam2.switch_mode_and_capture_file("still", 'no anomaly.'+str(number+1)+'.jpg')
+picam2.switch_mode_and_capture_file("still", 'imagea.'+str(number+1)+'.jpg')
 
 #while(True):
 #    print("Press [s] to take a picture...")
