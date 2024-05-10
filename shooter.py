@@ -29,7 +29,7 @@ while(True):
     print("Press [s] to take a picture...")
     key = input()
     print(f"You pressed {key}")
-    if key == 's':  
+    if key:  
         print("Picture taken")
         picam2.capture_file('image.'+str(number+1)+'.jpg')
     else:
