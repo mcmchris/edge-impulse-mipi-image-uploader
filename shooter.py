@@ -12,7 +12,6 @@ if images:
 else:
     newest = 'image0.jpg'
 
-number = int(''.join([i for i in newest if i.isdigit()]))
 
 picam2 = Picamera2()
 picam2.start_preview(Preview.DRM, x=0, y=0, width=1080, height=1080)
@@ -26,6 +25,7 @@ picam2.start()
 #time.sleep(2)
 
 while(True):
+    number = int(''.join([i for i in newest if i.isdigit()]))
     print("Press [Enter] to take a picture...")
     key = input()
     print("Picture taken")
