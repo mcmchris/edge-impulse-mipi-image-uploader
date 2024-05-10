@@ -31,7 +31,7 @@ while(True):
     print(f"You pressed {key}")
     if key == 's':  
         print("Picture taken")
-        picam2.capture_file("still", 'image'+str(number+1)+'.jpg')
+        picam2.capture_file('image'+str(number+1)+'.jpg')
     else:
         print("Wrong key pressed")
 
