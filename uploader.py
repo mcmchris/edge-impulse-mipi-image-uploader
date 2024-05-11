@@ -1,7 +1,7 @@
 import edgeimpulse as ei
 from datetime import datetime
 
-ei.API_KEY = "ei_056b076d107287ae4471a52c50e98484b07e8134d8ebbdf380adfcd56a40f27a"
+ei.API_KEY = "****************************"
 
 response = ei.experimental.data.upload_directory(
     directory="validate",
